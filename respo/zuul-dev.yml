@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: hello-spring-cloud-zuul
+  zipkin:
+    base-url: http://localhost:9411
+    #设置Sleuth的抽样收集概率
+  sleuth:
+    sampler:
+      probability: 0.1
+
+server:
+  port: 80
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/,http://localhost:8763/eureka/
+
+zuul:
+  routes:
+    api-a:
+      path: /api/a/**
+      serviceId: hello-spring-cloud-web-admin-ribbon
+    api-b:
+      path: /api/b/**
+      serviceId: hello-spring-cloud-web-admin-feign

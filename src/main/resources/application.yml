@@ -1,4 +1,3 @@
-
 spring:
   application:
     name: cnheri-token-config
@@ -6,17 +5,20 @@ spring:
     admin:
       client:
         url: http://47.105.64.181:8084
+  zipkin:
+    base-url: http://47.105.64.181:9411
+  sleuth:
+    sampler:
+      probability: 0.1
   cloud:
     config:
       label: master
       server:
         git:
-          uri: https://github.com/cnheri-token/token-config
+          uri: https://github.com/cnheri-token/cnheri-token-config
           search-paths: respo
           username: richardle1983
           password: Ljb@314159265
-  zipkin:
-    base-url: http://47.105.64.181:9411
 
 server:
   port: 8888

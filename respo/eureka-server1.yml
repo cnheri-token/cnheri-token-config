@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: cnheri-token-eureka
+  zipkin:
+    base-url: http://47.105.64.181:9411
+    #设置Sleuth的抽样收集概率
+  sleuth:
+    sampler:
+      probability: 0.1
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: 47.105.64.181
+  client:
+    service-url:
+      defaultZone: http://121.37.187.157:8861/eureka/,http://121.37.185.48:8961/eureka/
+      fetch-registry: true
