@@ -1,0 +1,36 @@
+
+spring:
+  application:
+    name: cnheri-token-config
+  boot:
+    admin:
+      client:
+        url: http://47.105.64.181:8084
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://github.com/cnheri-token/token-config
+          search-paths: respo
+          username: richardle1983
+          password: Ljb@314159265
+  zipkin:
+    base-url: http://47.105.64.181:9411
+
+server:
+  port: 8888
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://47.105.64.181:8761/eureka/
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health,info
