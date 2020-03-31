@@ -5,6 +5,8 @@ spring:
     admin:
       client:
         url: http://localhost:8084
+        instance:
+          prefer-ip: true
   zipkin:
     base-url: http://localhost:9411
   sleuth:

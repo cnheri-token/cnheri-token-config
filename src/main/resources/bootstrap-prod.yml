@@ -5,6 +5,7 @@ spring:
     admin:
       client:
         url: http://47.105.64.181:8084
+
   zipkin:
     base-url: http://47.105.64.181:9411
   sleuth:
