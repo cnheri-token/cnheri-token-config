@@ -23,5 +23,3 @@ jobs:
         mv maven-settings.xml settings.xml
         ls -alh
         mvn -B package --file pom.xml
-
-
