@@ -15,10 +15,10 @@ eureka:
       defaultZone: http://47.105.64.181:8761/eureka/,http://121.37.187.157:8761/eureka/,http://121.37.185.48:8761/eureka/
 
 management:
-  endpoint:
-    health:
-      show-details: always
   endpoints:
     web:
       exposure:
-        include: health,info
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS

@@ -19,3 +19,11 @@ eureka:
     service-url:
       defaultZone: http://47.105.64.181:8761/eureka/,http://121.37.187.157:8761/eureka/,http://121.37.185.48:8761/eureka/
       fetch-registry: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
