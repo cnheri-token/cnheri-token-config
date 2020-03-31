@@ -52,16 +52,16 @@
         </dependency>
         <!-- Spring Boot Admin End -->
     </dependencies>
-    <repositories>
+    <distributionManagement>
         <repository>
             <id>rdc-releases</id>
             <url>https://repo.rdc.aliyun.com/repository/127368-release-vxC1h6/</url>
         </repository>
-        <repository>
+        <snapshotRepository>
             <id>rdc-snapshots</id>
             <url>https://repo.rdc.aliyun.com/repository/127368-snapshot-X5D0n6/</url>
-        </repository>
-    </repositories>
+        </snapshotRepository>
+    </distributionManagement>
     <build>
         <plugins>
             <plugin>

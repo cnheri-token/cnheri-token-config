@@ -23,4 +23,4 @@ jobs:
         mv settings.xml settings.xml.bak
         mv maven-settings.xml settings.xml
         cat settings.xml
-        mvn -B package --file pom.xml
+        mvn clean deploy -DskipTests
