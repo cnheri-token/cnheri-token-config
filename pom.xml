@@ -52,18 +52,6 @@
         </dependency>
         <!-- Spring Boot Admin End -->
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <mainClass>com.cnheri.token.config.ConfigApp</mainClass>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
     <servers>
         <server>
             <id>rdc-releases</id>
@@ -76,17 +64,25 @@
             <password>QfmN2Uhl0j</password>
         </server>
     </servers>
-    <profile>
-        <id>rdc-private-repo</id>
-        <repositories>
-            <repository>
-                <id>rdc-releases</id>
-                <url>https://repo.rdc.aliyun.com/repository/127368-release-vxC1h6/</url>
-            </repository>
-            <repository>
-                <id>rdc-snapshots</id>
-                <url>https://repo.rdc.aliyun.com/repository/127368-snapshot-X5D0n6/</url>
-            </repository>
-        </repositories>
-    </profile>
+    <repositories>
+        <repository>
+            <id>rdc-releases</id>
+            <url>https://repo.rdc.aliyun.com/repository/127368-release-vxC1h6/</url>
+        </repository>
+        <repository>
+            <id>rdc-snapshots</id>
+            <url>https://repo.rdc.aliyun.com/repository/127368-snapshot-X5D0n6/</url>
+        </repository>
+    </repositories>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.cnheri.token.config.ConfigApp</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
