@@ -64,4 +64,14 @@
             </plugin>
         </plugins>
     </build>
+        <repositories>
+            <repository>
+                <id>rdc-releases</id>
+                <url>https://repo.rdc.aliyun.com/repository/127368-release-vxC1h6/</url>
+            </repository>
+            <repository>
+                <id>rdc-snapshots</id>
+                <url>https://repo.rdc.aliyun.com/repository/127368-snapshot-X5D0n6/</url>
+            </repository>
+        </repositories>
 </project>
