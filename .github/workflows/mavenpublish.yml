@@ -17,6 +17,12 @@ jobs:
       with:
         java-version: 1.8
         server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
-        settings-path: ${{ github.workspace }} # location for the settings.xml file
+        settings-path: ${{ github.workspace }} # location for the maven-settings.xml file
     - name: Build with Maven
-      run: ls -alh
+      run: |
+        mv settings.xml settings.xml.bak
+        mv maven-settings.xml settings.xml
+        ls -alh
+        Run mvn -B package --file pom.xml
+
+

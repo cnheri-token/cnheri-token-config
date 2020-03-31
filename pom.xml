@@ -24,7 +24,7 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <!-- Spring Boot End -->
+        <!-- Spring Boot End -->配置
 
         <!-- Spring Cloud Begin -->
         <dependency>
@@ -63,18 +63,4 @@
             </plugin>
         </plugins>
     </build>
-    <repositories>
-        <repository>
-            <id>rdc-releases</id>
-            <username>Rbdg7o</username>
-            <password>QfmN2Uhl0j</password>
-            <url>https://repo.rdc.aliyun.com/repository/127368-release-vxC1h6/</url>
-        </repository>
-        <repository>
-            <id>rdc-snapshots</id>
-            <username>Rbdg7o</username>
-            <password>QfmN2Uhl0j</password>
-            <url>https://repo.rdc.aliyun.com/repository/127368-snapshot-X5D0n6/</url>
-        </repository>
-    </repositories>
 </project>
