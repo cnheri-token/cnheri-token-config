@@ -1,9 +1,12 @@
 spring:
   application:
     name: cnheri-token-eureka
+  boot:
+    admin:
+      client:
+        url: http://47.105.64.181:8084
   zipkin:
     base-url: http://47.105.64.181:9411
-    #设置Sleuth的抽样收集概率
   sleuth:
     sampler:
       probability: 0.1

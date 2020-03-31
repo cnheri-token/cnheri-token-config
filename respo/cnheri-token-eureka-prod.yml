@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: cnheri-token-eureka
+  boot:
+    admin:
+      client:
+        url: http://47.105.64.181:8084
+  zipkin:
+    base-url: http://47.105.64.181:9411
+  sleuth:
+    sampler:
+      probability: 0.1
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: host
+  client:
+    service-url:
+      defaultZone: http://47.105.64.181:8761/eureka/,http://121.37.187.157:8761/eureka/,http://121.37.185.48:8761/eureka/
+      fetch-registry: true
