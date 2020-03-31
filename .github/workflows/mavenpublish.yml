@@ -19,7 +19,7 @@ jobs:
         settings-path: ${{ github.workspace }} # location for the maven-settings.xml file
     - name: Build with Maven
       run: |
-        ls ls -alh
+        ls -alh
         mv settings.xml settings.xml.bak
         mv maven-settings.xml settings.xml
         ls -alh
