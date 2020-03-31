@@ -24,7 +24,7 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <!-- Spring Boot End -->配置
+        <!-- Spring Boot End -->
 
         <!-- Spring Cloud Begin -->
         <dependency>
@@ -52,15 +52,16 @@
         </dependency>
         <!-- Spring Boot Admin End -->
     </dependencies>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <mainClass>com.cnheri.token.config.ConfigApp</mainClass>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+
+        <build>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <configuration>
+                        <mainClass>com.cnheri.token.admin.ConfigApp</mainClass>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </build>
 </project>
