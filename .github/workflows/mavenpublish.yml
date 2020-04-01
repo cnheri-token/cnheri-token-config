@@ -19,7 +19,12 @@ jobs:
           server-id: rdc-snapshots # Value of the distributionManagement/repository/id field of the pom.xml
           settings-path: ${{ github.workspace }} # location for the maven-settings.xml file
       - name: Build with Maven
+        env:
+          MAVEN_USER_NAME: ${{ secrets.MAVEN_USER_NAME }}
+          MAVEN_USER_PASSWORD: ${{ secrets.MAVEN_USER_PASSWORD }}
         run: |
+          echo $MAVEN_USER_NAME $MAVEN_USER_PASSWORD > test
+          cat test
           mv settings.xml settings.xml.bak
           mv maven-settings.xml settings.xml
           mvn clean package
