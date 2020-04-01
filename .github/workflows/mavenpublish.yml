@@ -16,11 +16,10 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-      - name: Build with Maven
-        with:
           server-id: rdc-snapshots # Value of the distributionManagement/repository/id field of the pom.xml
           settings-path: ${{ github.workspace }} # location for the maven-settings.xml file
+      - name: Build with Maven
         run: |
           mv settings.xml settings.xml.bak
           mv maven-settings.xml settings.xml
-          mvn clean deploy -DskipTests
+          mvn clean package
