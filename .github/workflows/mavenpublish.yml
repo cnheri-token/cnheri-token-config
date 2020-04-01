@@ -21,7 +21,6 @@ jobs:
       - name: Build with Maven
         run: |
           mv /usr/share/apache-maven-3.6.3/conf/settings.xml /usr/share/apache-maven-3.6.3/conf/settings.xml.bak
-          mv settings.xml settings.xml.bak
           cp maven-settings.xml /usr/share/apache-maven-3.6.3/conf/settings.xml
-          mv maven-settings.xml settings.xml
           mvn package
+
