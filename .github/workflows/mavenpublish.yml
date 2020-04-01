@@ -20,6 +20,5 @@ jobs:
           settings-path: ${{ github.workspace }}
       - name: Build with Maven
         run: |
-          mv settings.xml settings.xml.bak
-          mv maven-settings.xml settings.xml
-          mvn -B package --file pom.xml
+          whereis settings.xml
+
