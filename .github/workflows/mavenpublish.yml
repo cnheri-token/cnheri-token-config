@@ -24,7 +24,7 @@ jobs:
           mv /usr/share/apache-maven-3.6.3/conf/settings.xml /usr/share/apache-maven-3.6.3/conf/settings.xml.bak
           cp maven-settings.xml /usr/share/apache-maven-3.6.3/conf/settings.xml
           mvn clean deploy -DskipTests
-          cp cnheri-token-config-1.0.0-SNAPSHOT.jar docker/cnheri-token-config-1.0.0-SNAPSHOT.jar
+          cp target/cnheri-token-config-1.0.0-SNAPSHOT.jar docker/cnheri-token-config-1.0.0-SNAPSHOT.jar
           cd docker
           docker build . --file Dockerfile --tag registry.cn-qingdao.aliyuncs.com/cnheri-itoken/config
           docker login --username=lejibin@qq.com --password=Ljb@314159265 registry.cn-qingdao.aliyuncs.com
