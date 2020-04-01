@@ -7,6 +7,7 @@
         <groupId>com.cnheri</groupId>
         <artifactId>cnheri-token-dependencies</artifactId>
         <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../cnheri-token-dependencies/pom.xml</relativePath>
     </parent>
 
     <artifactId>cnheri-token-config</artifactId>
@@ -51,6 +52,28 @@
         </dependency>
         <!-- Spring Boot Admin End -->
     </dependencies>
+    <repositories>
+        <repository>
+            <id>rdc-releases</id>
+            <url>https://repo.rdc.aliyun.com/repository/127368-release-vxC1h6/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>rdc-snapshots</id>
+            <url>https://repo.rdc.aliyun.com/repository/127368-snapshot-X5D0n6/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
     <distributionManagement>
         <repository>
             <id>rdc-releases</id>
