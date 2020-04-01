@@ -11,10 +11,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+
       - uses: actions/checkout@v2
-      - run: |
-          mv settings.xml settings.xml.bak
-          mv maven-settings.xml settings.xml
       - name: Set up JDK 1.8
         uses: actions/setup-java@v1
         with:
@@ -23,4 +21,6 @@ jobs:
           settings-path: ${{ github.workspace }} # location for the maven-settings.xml file
       - name: Build with Maven
         run: |
+          mv settings.xml settings.xml.bak
+          mv maven-settings.xml settings.xml
           mvn clean deploy -DskipTests
