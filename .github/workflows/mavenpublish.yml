@@ -25,5 +25,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.MAVEN_USER_PASSWORD }}
         run: |
           cat settings.xml
-          echo $GITHUB_ACTOR $GITHUB_TOKEN
+          echo $GITHUB_ACTOR $GITHUB_TOKEN ${{ secrets.MAVEN_USER_NAME }} ${{ secrets.MAVEN_USER_PASSWORD }}
           mvn clean deploy -DskipTests
