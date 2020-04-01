@@ -1,0 +1,16 @@
+<settings>
+    <servers>
+        <server>
+            <id>rdc-snapshots</id>
+            <username>Rbdg7o</username>
+            <password>E6KyR7bCTv</password>
+        </server>
+    </servers>
+    <servers>
+        <server>
+            <id>rdc-releases</id>
+            <username>Rbdg7o</username>
+            <password>E6KyR7bCTv</password>
+        </server>
+    </servers>
+</settings>
