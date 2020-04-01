@@ -90,7 +90,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.cnheri.token.admin.ConfigApp</mainClass>
+                    <mainClass>com.cnheri.token.config.ConfigApp</mainClass>
                 </configuration>
             </plugin>
         </plugins>
