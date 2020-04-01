@@ -5,7 +5,7 @@ spring:
     admin:
       client:
         instance:
-          service-url: http://47.105.64.181:8761
+          service-url: http://${LOCAL_HOST_IP}:${LOCAL_HOST_PORT}
         url: http://47.105.64.181:8084
   zipkin:
     base-url: http://47.105.64.181:9411
@@ -16,7 +16,9 @@ server:
   port: 8761
 eureka:
   instance:
-    hostname: 47.105.64.181
+    hostname: ${LOCAL_HOST_IP}
+    prefer-ip-address: true
+    instance-id: ${LOCAL_HOST_IP}:${LOCAL_HOST_PORT}
   client:
     service-url:
       defaultZone: http://47.105.64.181:8761/eureka/,http://121.37.187.157:8761/eureka/,http://121.37.185.48:8761/eureka/
