@@ -1,12 +1,8 @@
 spring:
   application:
-    name: cnheri-token-config
-  boot:
-    admin:
-      client:
-        url: http://localhost:8084
+    name: ${APP_NAME:cnheri-config}
   zipkin:
-    base-url: http://localhost:9411
+    base-url: http://${ZIPKIN_SERVER_IP:localhost}:${ZIPKIN_SERVER_PORT:9411}
   sleuth:
     sampler:
       probability: 0.1
@@ -15,18 +11,22 @@ spring:
       label: master
       server:
         git:
-          uri: https://github.com/cnheri-token/cnheri-token-config
-          search-paths: respo
-          username: richardle1983
-          password: Ljb@314159265
+          uri: ${GIT_URL:https://github.com/richardle1983/cnheri-config}
+          search-paths: ${GIT_SEARCH_PATHS:respo}
+          username: ${GIT_USERNAME}
+          password: ${GIT_PASSWORD}
 
 server:
-  port: 8888
+  port: ${CONFIG_SERVER_PORT:8888}
 
 eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    health-check-url-path: /actuator/health
   client:
+    registryFetchIntervalSeconds: 5
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/,http://localhost:8861/eureka/,http://localhost:8961/eureka/
+      defaultZone: ${EUREKA_DEFAULT_ZONE:http://localhost:8761/eureka/,http://localhost:8861/eureka/,http://localhost:8961/eureka/}
 
 management:
   endpoints:
