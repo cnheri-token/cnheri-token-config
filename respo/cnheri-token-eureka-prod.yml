@@ -1,12 +1,14 @@
 spring:
   application:
-    name: cnheri-token-eureka
+    name: ${APP_NAME:cnheri-eureka}
+  security:
+    user:
+      name: ${SECURITY_USER_NAME:admin}
+      password: ${SECURITY_USER_PASSWORD:admin}
   boot:
     admin:
       client:
-        instance:
-          service-url: http://${LOCAL_HOST_IP}:${LOCAL_HOST_PORT}
-        url: http://47.105.64.181:8084
+        url: http://${SECURITY_USER_NAME:admin}:${SECURITY_USER_PASSWORD:admin}@47.105.64.181:8084
   zipkin:
     base-url: http://47.105.64.181:9411
   sleuth:
@@ -16,9 +18,7 @@ server:
   port: 8761
 eureka:
   instance:
-    hostname: ${LOCAL_HOST_IP}
-    prefer-ip-address: true
-    instance-id: ${LOCAL_HOST_IP}:${LOCAL_HOST_PORT}
+    hostname:
   client:
     service-url:
       defaultZone: http://47.105.64.181:8761/eureka/,http://121.37.187.157:8761/eureka/,http://121.37.185.48:8761/eureka/
