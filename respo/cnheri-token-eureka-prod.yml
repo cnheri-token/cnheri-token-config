@@ -1,10 +1,7 @@
 spring:
   application:
     name: ${APP_NAME:cnheri-eureka}
-  security:
-    user:
-      name: ${SECURITY_USER_NAME:admin}
-      password: ${SECURITY_USER_PASSWORD:admin}
+
   boot:
     admin:
       client:
