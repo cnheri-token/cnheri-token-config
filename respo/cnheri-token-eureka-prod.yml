@@ -1,7 +1,10 @@
 spring:
   application:
     name: ${APP_NAME:cnheri-eureka}
-
+  security:
+    user:
+      name: ${SECURITY_USER_NAME:admin}
+      password: ${SECURITY_USER_PASSWORD:admin}
   boot:
     admin:
       client:
@@ -18,6 +21,10 @@ eureka:
     hostname: ${LOCAL_HOST_IP:localhost}
     health-check-url-path: /actuator/health
   client:
+    security:
+      user:
+        name: ${SECURITY_USER_NAME:admin}
+        password: ${SECURITY_USER_PASSWORD:admin}
     service-url:
       defaultZone: ${EUREKA_DEFAULT_ZONE:http://admin:admin@localhost:8761/eureka/,http://admin:admin@localhost:8861/eureka/,http://admin:admin@localhost:8961/eureka/}
     register-with-eureka: true
