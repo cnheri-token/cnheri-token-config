@@ -18,7 +18,7 @@ server:
   port: 8761
 eureka:
   instance:
-    hostname: host
+    hostname: ${LOCAL_HOST_IP:localhost}
     health-check-url-path: /actuator/health
   client:
     service-url:
