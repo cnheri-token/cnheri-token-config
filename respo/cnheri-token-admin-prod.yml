@@ -17,8 +17,9 @@ eureka:
   instance:
     health-check-url-path: /actuator/health
     metadata-map:
-      user.name: ${SECURITY_USER_NAME:admin}
-      user.password: ${SECURITY_USER_PASSWORD:admin}
+      user:
+        name: ${SECURITY_USER_NAME:admin}
+        password: ${SECURITY_USER_PASSWORD:admin}
   client:
     security:
       user:
