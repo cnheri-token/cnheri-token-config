@@ -16,6 +16,9 @@ server:
 eureka:
   instance:
     health-check-url-path: /actuator/health
+    metadata-map:
+      user.name: ${SECURITY_USER_NAME:admin}
+      user.password: ${SECURITY_USER_PASSWORD:admin}
   client:
     serviceUrl:
       defaultZone: ${EUREKA_DEFAULT_ZONE:http://admin:admin@localhost:8761/eureka/,http://admin:admin@localhost:8861/eureka/,http://admin:admin@localhost:8961/eureka/}
